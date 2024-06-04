@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="inserisciDati.php">inserisci dati</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        <div class="grafici-container" id="graficiContainer"></div>
+    </div>
+    <script>/*
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('../backned/DashboardController.php')
+                .then(response => response.json())
+                .then(data => {
+                    const graficiContainer = document.getElementById('graficiContainer');
+                    
+                    for (const esercizio in data) {
+                        const esercizioData = data[esercizio];
+                        const labels = esercizioData.map(a => a.data);
+                        const pesoData = esercizioData.map(a => a.peso);
+                        const ripetizioniData = esercizioData.map(a => a.ripetizioni);
+
+                        const card = document.createElement('div');
+                        card.className = 'card';
+
+                        const canvas = document.createElement('canvas');
+                        card.appendChild(canvas);
+                        graficiContainer.appendChild(card);
+
+                        const ctx = canvas.getContext('2d');
+                        const chartData = {
+                            labels: labels,
+                            datasets: [
+                                {
+                                    label: 'Peso',
+                                    data: pesoData,
+                                    borderColor: 'rgba(75, 192, 192, 1)',
+                                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                    yAxisID: 'y',
+                                },
+                                {
+                                    label: 'Ripetizioni',
+                                    data: ripetizioniData,
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                    yAxisID: 'y1',
+                                }
+                            ]
+                        };
+
+                        const config = {
+                            type: 'line',
+                            data: chartData,
+                            options: {
+                                scales: {
+                                    y: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'left',
+                                        title: {
+                                            display: true,
+                                            text: 'Peso (kg)'
+                                        }
+                                    },
+                                    y1: {
+                                        type: 'linear',
+                                        display: true,
+                                        position: 'right',
+                                        title: {
+                                            display: true,
+                                            text: 'Ripetizioni'
+                                        },
+                                        grid: {
+                                            drawOnChartArea: false,
+                                        },
+                                    }
+                                }
+                            }
+                        };
+
+                        new Chart(ctx, config);
+                    }
+                })
+                .catch(error => console.error('Errore nel recupero dei dati:', error));
+        });*/
+        document.write("far apparire i grafici con i dati ricevuti dal backend");
+    </script>
+</body>
+</html>
