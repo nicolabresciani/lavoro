@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header .terminate-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.workout-info {
+    margin: 20px 0;
+}
+
+.workout-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.workout-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.workout-info .note {
+    color: #ccc;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.add-exercise-btn {
+    background-color: #007BFF;
+    color: white;
+}
+
+.cancel-workout-btn {
+    background-color: #dc3545;
+    color: white;
+}
