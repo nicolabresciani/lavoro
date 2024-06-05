@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     try {
         // Aggiorna lo stato dell'allenamento come terminato
-        $sql = "UPDATE Workouts SET stato = 'terminato', data_fine = NOW() WHERE id = ? AND user_id = ?";
+        $sql = "UPDATE Workouts SET data_fine = NOW() WHERE id = ? AND user_id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ii", $workout_id, $user_id);
 
