@@ -10,7 +10,6 @@
     <div class="container">
         <div class="content">
             <h1>Inizia allenamento</h1>
-            <p>Avvio rapido</p>
             <form action= "../frontend/workout.php">
                 <button type="submit" class="start-workout-btn">Inizia un allenamento vuoto</button>
             </form>

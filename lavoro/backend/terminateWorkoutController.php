@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     } catch (Exception $e) {
         $_SESSION['error'] = $e->getMessage();
-        header("Location: ../frontend/workout.php?workout_id=$workout_id");
+        header("Location: ../frontend/workout.php");
         exit; // Assicurati di uscire dopo l'invio dell'intestazione
     } finally {
         // Chiudi il prepared statement e la connessione solo se sono stati definiti
